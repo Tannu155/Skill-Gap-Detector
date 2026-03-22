@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1, "skill": "Python", "level": "Beginner",
+    "title": "Python for Beginners — Full Course",
+    "platform": "YouTube", "duration_hours": 4,
+    "url": "https://www.youtube.com/watch?v=eWRfhZUzrAc"
+  },
+  {
+    "id": 2, "skill": "Python", "level": "Intermediate",
+    "title": "Intermediate Python Programming",
+    "platform": "YouTube", "duration_hours": 6,
+    "url": "https://www.youtube.com/watch?v=HGOBQPFzWKo"
+  },
+  {
+    "id": 3, "skill": "Python", "level": "Advanced",
+    "title": "Advanced Python — OOP, Decorators, Generators",
+    "platform": "YouTube", "duration_hours": 8,
+    "url": "https://www.youtube.com/watch?v=Ej_02ICOIgs"
+  },
+  {
+    "id": 4, "skill": "SQL", "level": "Beginner",
+    "title": "SQL Tutorial — Full Database Course",
+    "platform": "YouTube", "duration_hours": 4,
+    "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+  },
+  {
+    "id": 5, "skill": "SQL", "level": "Intermediate",
+    "title": "SQL Intermediate — Joins, Subqueries",
+    "platform": "YouTube", "duration_hours": 5,
+    "url": "https://www.youtube.com/watch?v=9URM1_2S0ho"
+  },
+  {
+    "id": 6, "skill": "Statistics", "level": "Beginner",
+    "title": "Statistics for Data Science — Full Course",
+    "platform": "YouTube", "duration_hours": 5,
+    "url": "https://www.youtube.com/watch?v=xxpc-HPKN28"
+  },
+  {
+    "id": 7, "skill": "Statistics", "level": "Intermediate",
+    "title": "Statistics and Probability — Khan Academy",
+    "platform": "Khan Academy", "duration_hours": 8,
+    "url": "https://www.khanacademy.org/math/statistics-probability"
+  },
+  {
+    "id": 8, "skill": "Machine Learning", "level": "Beginner",
+    "title": "Machine Learning Crash Course — Google",
+    "platform": "Google", "duration_hours": 15,
+    "url": "https://developers.google.com/machine-learning/crash-course"
+  },
+  {
+    "id": 9, "skill": "JavaScript", "level": "Beginner",
+    "title": "JavaScript Full Course for Beginners",
+    "platform": "YouTube", "duration_hours": 7,
+    "url": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+  },
+  {
+    "id": 10, "skill": "React", "level": "Intermediate",
+    "title": "React JS Full Course",
+    "platform": "YouTube", "duration_hours": 8,
+    "url": "https://www.youtube.com/watch?v=b9eMGE7QtTk"
+  }
+]
