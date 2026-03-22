@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1, "skill": "Python", "difficulty": 1,
+    "question": "What is the output of print(2+3)?",
+    "options": {"A":"4","B":"5","C":"6","D":"23"},
+    "answer": "B"
+  },
+  {
+    "id": 2, "skill": "Python", "difficulty": 2,
+    "question": "Which keyword defines a function in Python?",
+    "options": {"A":"func","B":"define","C":"def","D":"fun"},
+    "answer": "C"
+  },
+  {
+    "id": 3, "skill": "Python", "difficulty": 3,
+    "question": "What does len([1,2,3]) return?",
+    "options": {"A":"2","B":"3","C":"4","D":"Error"},
+    "answer": "B"
+  },
+  {
+    "id": 4, "skill": "Python", "difficulty": 4,
+    "question": "What is a lambda function?",
+    "options": {"A":"A loop","B":"A class","C":"Anonymous function","D":"A module"},
+    "answer": "C"
+  },
+  {
+    "id": 5, "skill": "Python", "difficulty": 5,
+    "question": "What does *args do in a function?",
+    "options": {"A":"Passes keyword args","B":"Passes variable positional args","C":"Defines a list","D":"Returns multiple values"},
+    "answer": "B"
+  },
+  {
+    "id": 6, "skill": "SQL", "difficulty": 1,
+    "question": "Which SQL command retrieves data?",
+    "options": {"A":"GET","B":"FETCH","C":"SELECT","D":"RETRIEVE"},
+    "answer": "C"
+  },
+  {
+    "id": 7, "skill": "SQL", "difficulty": 2,
+    "question": "Which clause filters rows in SQL?",
+    "options": {"A":"HAVING","B":"WHERE","C":"FILTER","D":"GROUP BY"},
+    "answer": "B"
+  },
+  {
+    "id": 8, "skill": "SQL", "difficulty": 3,
+    "question": "What does JOIN do in SQL?",
+    "options": {"A":"Deletes tables","B":"Combines rows from tables","C":"Creates indexes","D":"Sorts data"},
+    "answer": "B"
+  },
+  {
+    "id": 9, "skill": "SQL", "difficulty": 4,
+    "question": "What is the difference between WHERE and HAVING?",
+    "options": {"A":"No difference","B":"HAVING filters groups, WHERE filters rows","C":"WHERE filters groups","D":"HAVING works without GROUP BY"},
+    "answer": "B"
+  },
+  {
+    "id": 10, "skill": "SQL", "difficulty": 5,
+    "question": "What is a correlated subquery?",
+    "options": {"A":"A query inside INSERT","B":"A subquery that references outer query","C":"A JOIN operation","D":"A stored procedure"},
+    "answer": "B"
+  },
+  {
+    "id": 11, "skill": "Statistics", "difficulty": 1,
+    "question": "What does the mean represent?",
+    "options": {"A":"Most frequent value","B":"Middle value","C":"Average value","D":"Largest value"},
+    "answer": "C"
+  },
+  {
+    "id": 12, "skill": "Statistics", "difficulty": 2,
+    "question": "What is standard deviation?",
+    "options": {"A":"Average of data","B":"Measure of data spread","C":"Middle value","D":"Sum of values"},
+    "answer": "B"
+  },
+  {
+    "id": 13, "skill": "Statistics", "difficulty": 3,
+    "question": "What does a p-value less than 0.05 indicate?",
+    "options": {"A":"Accept null hypothesis","B":"Reject null hypothesis","C":"No conclusion","D":"Data is wrong"},
+    "answer": "B"
+  },
+  {
+    "id": 14, "skill": "Statistics", "difficulty": 4,
+    "question": "What is a normal distribution?",
+    "options": {"A":"Skewed data","B":"Bell shaped symmetric distribution","C":"Random data","D":"Uniform data"},
+    "answer": "B"
+  },
+  {
+    "id": 15, "skill": "Statistics", "difficulty": 5,
+    "question": "What is the Central Limit Theorem?",
+    "options": {"A":"Data is always normal","B":"Sample means form normal distribution as n increases","C":"Population is always large","D":"Mean equals median"},
+    "answer": "B"
+  },
+  {
+    "id": 16, "skill": "Machine Learning", "difficulty": 1,
+    "question": "What is supervised learning?",
+    "options": {"A":"Learning without data","B":"Learning with labeled data","C":"Learning with unlabeled data","D":"Learning by reward"},
+    "answer": "B"
+  },
+  {
+    "id": 17, "skill": "Machine Learning", "difficulty": 2,
+    "question": "Which algorithm is used for classification?",
+    "options": {"A":"Linear Regression","B":"K-Means","C":"Decision Tree","D":"PCA"},
+    "answer": "C"
+  },
+  {
+    "id": 18, "skill": "Machine Learning", "difficulty": 3,
+    "question": "What is overfitting?",
+    "options": {"A":"Model performs well on all data","B":"Model memorizes training data but fails on new data","C":"Model is too simple","D":"Model has no errors"},
+    "answer": "B"
+  },
+  {
+    "id": 19, "skill": "Machine Learning", "difficulty": 4,
+    "question": "What does cross validation do?",
+    "options": {"A":"Increases training data","B":"Tests model on multiple data splits","C":"Removes outliers","D":"Normalizes data"},
+    "answer": "B"
+  },
+  {
+    "id": 20, "skill": "Machine Learning", "difficulty": 5,
+    "question": "What is the bias-variance tradeoff?",
+    "options": {"A":"Balance between model size and speed","B":"Balance between underfitting and overfitting","C":"Balance between precision and recall","D":"Balance between train and test size"},
+    "answer": "B"
+  },
+  {
+    "id": 21, "skill": "JavaScript", "difficulty": 1,
+    "question": "Which keyword declares a variable in modern JavaScript?",
+    "options": {"A":"var","B":"int","C":"let","D":"dim"},
+    "answer": "C"
+  },
+  {
+    "id": 22, "skill": "JavaScript", "difficulty": 2,
+    "question": "What does === check in JavaScript?",
+    "options": {"A":"Value only","B":"Type only","C":"Value and type","D":"Neither"},
+    "answer": "C"
+  },
+  {
+    "id": 23, "skill": "JavaScript", "difficulty": 3,
+    "question": "What is a Promise in JavaScript?",
+    "options": {"A":"A loop","B":"An async operation result","C":"A variable type","D":"A function"},
+    "answer": "B"
+  },
+  {
+    "id": 24, "skill": "JavaScript", "difficulty": 4,
+    "question": "What does the spread operator ... do?",
+    "options": {"A":"Multiplies values","B":"Expands iterable into individual elements","C":"Creates a loop","D":"Defines a class"},
+    "answer": "B"
+  },
+  {
+    "id": 25, "skill": "JavaScript", "difficulty": 5,
+    "question": "What is event bubbling?",
+    "options": {"A":"Creating events","B":"Event firing from child to parent elements","C":"Stopping events","D":"Event firing from parent to child"},
+    "answer": "B"
+  },
+  {
+    "id": 26, "skill": "React", "difficulty": 1,
+    "question": "What is JSX?",
+    "options": {"A":"A database","B":"JavaScript XML syntax for React","C":"A CSS framework","D":"A backend language"},
+    "answer": "B"
+  },
+  {
+    "id": 27, "skill": "React", "difficulty": 2,
+    "question": "What hook manages state in React?",
+    "options": {"A":"useEffect","B":"useRef","C":"useState","D":"useContext"},
+    "answer": "C"
+  },
+  {
+    "id": 28, "skill": "React", "difficulty": 3,
+    "question": "What does useEffect do?",
+    "options": {"A":"Manages state","B":"Runs side effects after render","C":"Creates components","D":"Handles routing"},
+    "answer": "B"
+  },
+  {
+    "id": 29, "skill": "React", "difficulty": 4,
+    "question": "What is the virtual DOM?",
+    "options": {"A":"A real browser DOM","B":"A lightweight copy of DOM for efficient updates","C":"A CSS library","D":"A database"},
+    "answer": "B"
+  },
+  {
+    "id": 30, "skill": "React", "difficulty": 5,
+    "question": "What is the purpose of React.memo?",
+    "options": {"A":"Store data","B":"Prevent unnecessary re-renders","C":"Create animations","D":"Handle routing"},
+    "answer": "B"
+  },
+  {
+    "id": 31, "skill": "Excel", "difficulty": 1,
+    "question": "Which function adds numbers in Excel?",
+    "options": {"A":"ADD()","B":"PLUS()","C":"SUM()","D":"TOTAL()"},
+    "answer": "C"
+  },
+  {
+    "id": 32, "skill": "Excel", "difficulty": 2,
+    "question": "What does VLOOKUP do?",
+    "options": {"A":"Sorts data","B":"Searches a column and returns a value","C":"Creates charts","D":"Filters rows"},
+    "answer": "B"
+  },
+  {
+    "id": 33, "skill": "Excel", "difficulty": 3,
+    "question": "What is a PivotTable used for?",
+    "options": {"A":"Creating formulas","B":"Summarizing large datasets","C":"Formatting cells","D":"Writing macros"},
+    "answer": "B"
+  },
+  {
+    "id": 34, "skill": "Deep Learning", "difficulty": 1,
+    "question": "What is a neural network?",
+    "options": {"A":"A type of database","B":"A system of connected nodes inspired by the brain","C":"A sorting algorithm","D":"A data structure"},
+    "answer": "B"
+  },
+  {
+    "id": 35, "skill": "Deep Learning", "difficulty": 2,
+    "question": "What is backpropagation?",
+    "options": {"A":"Forward pass of data","B":"Algorithm to update weights using gradients","C":"Data preprocessing","D":"Model evaluation"},
+    "answer": "B"
+  },
+  {
+    "id": 36, "skill": "Deep Learning", "difficulty": 3,
+    "question": "What is a CNN used for?",
+    "options": {"A":"Text processing","B":"Image recognition","C":"Time series","D":"Tabular data"},
+    "answer": "B"
+  }
+]
