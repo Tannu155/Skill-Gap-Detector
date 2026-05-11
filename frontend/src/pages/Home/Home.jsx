@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api';
-
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000/api';
 export default function Home() {
   const [name, setName] = useState('');
   const [role, setRole] = useState('');
