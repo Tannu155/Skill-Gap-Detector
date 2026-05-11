@@ -19,14 +19,14 @@ export default function Login() {
     setError('');
     try {
       if (isRegister) {
-        await axios.post(`${process.env.REACT_APP_API_URL || 'http://localhost:8000/api'}/api/auth/register`, {
+        await axios.post(`${process.env.REACT_APP_API_URL || 'http://localhost:8000/api'}/auth/register`, {
           name, email, password, is_hr: isHR
         });
         setIsRegister(false);
         setError('');
         alert('Registered! Please login now.');
       } else {
-        const res = await axios.post(`${process.env.REACT_APP_API_URL || 'http://localhost:8000/api'}/api/auth/login`, {
+        const res = await axios.post(`${process.env.REACT_APP_API_URL || 'http://localhost:8000/api'}/auth/login`, {
           email, password
         });
         const user = res.data.user;
