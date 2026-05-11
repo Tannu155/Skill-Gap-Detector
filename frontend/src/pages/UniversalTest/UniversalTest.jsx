@@ -22,49 +22,68 @@ export default function UniversalTest() {
 
   useEffect(() => { beginSkill(0); }, []);
 
-  const beginSkill = async (idx) => {
-    if (idx >= skillNames.length) { await generateReport(); return; }
-    setLoading(true);
-    setStatus(`AI generating ${skillNames[idx]} questions...`);
-    try {
-      const res = await axios.post(`${API_URL}/universal/start-test/${encodeURIComponent(skillNames[idx])}`);
-      setSessionId(res.data.session_id);
-      setQuestion(res.data.question);
-      setCurrentSkillIdx(idx);
-      setAnswered(0);
-      setSelected(null);
-      setFeedback(null);
-      setLoading(false);
-    } catch (err) {
-      setStatus('Error loading question.');
+ const beginSkill = async (idx) => {
+  if (idx >= skillNames.length) {
+    await generateReport();
+    return;
+  }
+  setLoading(true);
+  setStatus(`AI generating ${skillNames[idx]} questions...`);
+  try {
+    const res = await axios.post(
+      `${API_URL}/universal/start-test/${encodeURIComponent(skillNames[idx])}`
+    );
+    if (res.data.error) {
+      setStatus('Error: ' + res.data.error);
+      return;
     }
-  };
+    setSessionId(res.data.session_id);
+    setQuestion(res.data.question);
+    setCurrentSkillIdx(idx);
+    setAnswered(0);
+    setSelected(null);
+    setFeedback(null);
+    setLoading(false);
+  } catch (err) {
+    console.error('Begin skill error:', err);
+    setStatus('Error loading question. Please refresh.');
+  }
+};
 
   const handleAnswer = async (option) => {
-    if (selected) return;
-    setSelected(option);
-    try {
-      const res = await axios.post(`${API_URL}/test/answer`, {
-        session_id: sessionId,
-        question_id: question.id,
-        answer: option
-      });
-      setFeedback(res.data.feedback);
-      setTimeout(async () => {
-        setFeedback(null);
-        if (res.data.status === 'completed') {
-          skillResults.current[skillNames[currentSkillIdx]] = res.data.result.level;
-          await beginSkill(currentSkillIdx + 1);
-        } else {
+  if (selected) return;
+  setSelected(option);
+  try {
+    const res = await axios.post(`${API_URL}/test/answer`, {
+      session_id: sessionId,
+      question_id: question.id,
+      answer: option
+    });
+    setFeedback(res.data.feedback);
+
+    setTimeout(async () => {
+      setFeedback(null);
+      if (res.data.status === 'completed') {
+        skillResults.current[skillNames[currentSkillIdx]] = res.data.result.level;
+        await beginSkill(currentSkillIdx + 1);
+      } else {
+        if (res.data.next_question) {
           setQuestion(res.data.next_question);
           setAnswered(a => a + 1);
           setSelected(null);
+          setLoading(false);
+        } else {
+          await beginSkill(currentSkillIdx + 1);
         }
-      }, 1500);
-    } catch (err) {
-      setSelected(null);
-    }
-  };
+      }
+    }, 1500);
+  } catch (err) {
+    console.error('Answer error:', err);
+    setSelected(null);
+    setLoading(false);
+  }
+};
+      
 
   const generateReport = async () => {
     setLoading(true);
