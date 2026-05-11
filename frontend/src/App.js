@@ -18,7 +18,6 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/select-role" element={<SelectRole />} />
         <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
         <Route path="/loading-skills" element={<PrivateRoute><LoadingSkills /></PrivateRoute>} />
         <Route path="/universal-test" element={<PrivateRoute><UniversalTest /></PrivateRoute>} />
