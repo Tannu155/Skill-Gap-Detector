@@ -35,7 +35,7 @@ export default function Login() {
         if (user.is_hr) {
           navigate('/hr');
         } else {
-          navigate('/select-role');
+          navigate('/');
         }
       }
     } catch (err) {
