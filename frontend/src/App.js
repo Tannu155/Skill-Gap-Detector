@@ -19,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
+        <Route path="/select-role" element={<PrivateRoute><Home /></PrivateRoute>} />
         <Route path="/loading-skills" element={<PrivateRoute><LoadingSkills /></PrivateRoute>} />
         <Route path="/universal-test" element={<PrivateRoute><UniversalTest /></PrivateRoute>} />
         <Route path="/report" element={<PrivateRoute><Report /></PrivateRoute>} />
