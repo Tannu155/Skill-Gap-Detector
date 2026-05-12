@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import Login from './pages/Login/Login';
 import Home from './pages/Home/Home';
 import LoadingSkills from './pages/LoadingSkills/LoadingSkills';
@@ -13,9 +14,23 @@ function PrivateRoute({ children, hrOnly = false }) {
   return children;
 }
 
+function CacheClearer() {
+  useEffect(() => {
+    const version = localStorage.getItem('app_version');
+    if (version !== '2.0') {
+      const user = localStorage.getItem('user');
+      localStorage.clear();
+      if (user) localStorage.setItem('user', user);
+      localStorage.setItem('app_version', '2.0');
+    }
+  }, []);
+  return null;
+}
+
 function App() {
   return (
     <BrowserRouter>
+      <CacheClearer />
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
