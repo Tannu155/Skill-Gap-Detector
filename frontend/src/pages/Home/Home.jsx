@@ -15,10 +15,19 @@ export default function Home() {
   const user = JSON.parse(localStorage.getItem('user') || '{}');
 
   useEffect(() => {
-    if (!user.id) navigate('/login');
-    axios.get(`${API_URL}/universal/roles`)
-      .then(res => setPredefinedRoles(res.data.predefined_roles));
-  }, []);
+  if (!user.id) navigate('/login');
+  axios.get(`${API_URL}/universal/roles`)
+    .then(res => setPredefinedRoles(res.data.predefined_roles))
+    .catch(() => setPredefinedRoles([
+      "Data Analyst", "Web Developer", "ML Engineer",
+      "Marketing Manager", "Product Manager", "Business Analyst",
+      "Graphic Designer", "Content Writer", "HR Manager",
+      "Financial Analyst", "Sales Manager", "Digital Marketer",
+      "Cybersecurity Analyst", "Cloud Engineer", "DevOps Engineer",
+      "Mobile App Developer", "UI/UX Designer", "Data Scientist",
+      "Network Engineer", "Database Administrator"
+    ]));
+}, []);
 
   const handleStart = () => {
     const finalRole = useCustom ? customRole : role;
