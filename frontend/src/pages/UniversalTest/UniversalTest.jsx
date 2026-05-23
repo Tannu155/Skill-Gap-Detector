@@ -30,9 +30,10 @@ export default function UniversalTest() {
   setLoading(true);
   setStatus(`AI generating ${skillNames[idx]} questions...`);
   try {
-    const res = await axios.post(
-      `${API_URL}/universal/start-test/${encodeURIComponent(skillNames[idx])}`
-    );
+    const skillEncoded = encodeURIComponent(skillNames[idx]).replace(/%2F/g, '-');
+const res = await axios.post(
+  `${API_URL}/universal/start-test/${skillEncoded}`
+);
     if (res.data.error) {
       setStatus('Error: ' + res.data.error);
       return;
