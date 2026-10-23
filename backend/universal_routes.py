@@ -3,10 +3,12 @@ from pydantic import BaseModel
 from ai_role_analyzer import get_required_skills_for_role
 from ai_gap_analysis import run_full_analysis
 from adaptive_test.engine import AdaptiveTestEngine
+# Share the session store with /test/answer, which is where the frontend
+# submits answers for tests started via /universal/start-test.
+from adaptive_test.routes import active_sessions
 import uuid
 
 router = APIRouter()
-active_sessions = {}
 
 PREDEFINED_ROLES = [
     "Data Analyst", "Web Developer", "ML Engineer",

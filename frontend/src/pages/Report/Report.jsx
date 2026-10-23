@@ -16,17 +16,21 @@ export default function Report() {
 
   const readiness = Math.round((summary.skills_met / summary.total_skills_required) * 100);
 
-  const chartData = [
-    ...gaps.map(g => ({ skill: g.skill, yours: 1, required: g.required_level === 'Advanced' ? 3 : g.required_level === 'Intermediate' ? 2 : 1 })),
-    ...skills_met.map(s => ({ skill: s.skill, yours: 2, required: 2 }))
-  ];
+  const LEVEL_VALUE = { Basic: 1, Beginner: 1, Intermediate: 2, Advanced: 3 };
+  const toLevel = (level) => LEVEL_VALUE[level] || 1;
+
+  const chartData = [...gaps, ...skills_met].map(item => ({
+    skill: item.skill,
+    yours: toLevel(item.your_level),
+    required: toLevel(item.required_level),
+  }));
 
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
       return (
         <div style={{background:'rgba(15,15,35,0.95)', border:'1px solid rgba(102,126,234,0.3)', borderRadius:'10px', padding:'10px 14px', fontSize:'12px', color:'white'}}>
           <p style={{marginBottom:'4px', fontWeight:'600'}}>{label}</p>
-          {payload.map(p => <p key={p.name} style={{color: p.name === 'yours' ? '#818cf8' : '#667eea'}}>{p.name}: {['','Beginner','Intermediate','Advanced'][p.value]}</p>)}
+          {payload.map(p => <p key={p.name} style={{color: p.dataKey === 'yours' ? '#818cf8' : '#667eea'}}>{p.name}: {['','Beginner','Intermediate','Advanced'][p.value]}</p>)}
         </div>
       );
     }
